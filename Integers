@@ -1,0 +1,16 @@
+public class Integers {
+    public static void main(String[] args){
+        int numberIntegarMax = Integer.MAX_VALUE; // 2147483647
+        int numberIntegarMin = Integer.MIN_VALUE; //-2147483648
+        System.out.println(numberIntegarMin);
+        // Integer == wrapper class, used to perform operation on integers
+
+        System.out.println(numberIntegarMax + 1); //-2147483648 // OVERFLOW
+        System.out.println(numberIntegarMin - 1); // 2147483647 // UNDERFLOW
+
+        int numberInvalid = 2147483648; //Integer number too large
+
+        int numberUnderscore = 2_147_483_647; //another syntax for int
+
+    }
+}
