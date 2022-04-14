@@ -1,16 +1,47 @@
-public class Integers {
+public class IntegarsBiteShortLong {
     public static void main(String[] args){
         int numberIntegarMax = Integer.MAX_VALUE; // 2147483647
         int numberIntegarMin = Integer.MIN_VALUE; //-2147483648
-        System.out.println(numberIntegarMin);
-        // Integer == wrapper class, used to perform operation on integers
+        // Integer = wrapper class, used to perform operation on integers
+        // integer occupies 32 bits = width 32 (2^31
 
         System.out.println(numberIntegarMax + 1); //-2147483648 // OVERFLOW
         System.out.println(numberIntegarMin - 1); // 2147483647 // UNDERFLOW
+        // works aswell with short and byte
 
-        int numberInvalid = 2147483648; //Integer number too large
+//        int numberInvalid = 2147483648; //Integer number too large
 
         int numberUnderscore = 2_147_483_647; //another syntax for int
 
-    }
-}
+
+        byte numberByteMax = Byte.MAX_VALUE; //127
+        byte numberByteMin = Byte.MIN_VALUE; //-128
+        // byte == wrapper class used to call variable byte
+        // byte occupies 8 bits = width 8 (2^7
+
+        short numberShortMax = Short.MAX_VALUE; //32767
+        short numberShortMin = Short.MIN_VALUE; //-32768
+        // short = wrapper class used to call variable short
+        // short occupies 16 bits = width 16 (2^15
+
+        long numberLong = 50L; // syntax of long, can be used with lowercase l, but it looks similar to 1, so use L
+        // if we use long without l  > 2147483647, it will give error //Integer number too large
+        long numberLongMax = Long.MAX_VALUE; // 9223372036854775807
+        long numberLongMin = Long.MIN_VALUE; // -9223372036854775808
+        // long = wrapper class used to call variable long
+        // long occupies 64 bits = width 64 (2^63
+
+        // number of width of specific type of number is important to save data
+        // byte is using least amount of data, while long used the most
+
+        int newIntNumberFromInt = (numberIntegarMax / 2); //1073741823, works fine 
+//        short newShortNumberFromShort = (numberShortMax / 2); // error, required short, provided int
+//        byte newByteNumberFromByte = (numberByteMax / 2); //error, required byte, provided int
+        short newShortNumberFromShort =  (short) (numberShortMax / 2);
+        byte newByteNumberFromByte = (byte) (numberByteMax / 2);
+        //now works fine
+        // (Data type)Casting is changing data types to another
+        // Default number data type is integer
+        // while declaring variable we provided another data type, different from integer
+        // that's why error occurred and we had to cast
+        }
