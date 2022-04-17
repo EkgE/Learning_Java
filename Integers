@@ -44,4 +44,55 @@ public class IntegarsBiteShortLong {
         // Default number data type is integer
         // while declaring variable we provided another data type, different from integer
         // that's why error occurred and we had to cast
+        
+        
+                byte challenge1NumberByte = 126;
+        short challenge1NumberShort = 32766;
+        int challenge1NumberInt = 2147483646;
+        long challenge1NumberLong = 50000L + 10L * ((long)challenge1NumberInt + challenge1NumberByte + challenge1NumberShort); //21475215380
+//  System.out.println(challenge1NumberLong);
+
+        float maxFloatNumber = Float.MAX_VALUE; //3.4028235E38
+        float minFloatNumber = Float.MIN_VALUE; // 1.4E-45
+//        System.out.println(maxFloatNumber);
+//        System.out.println(minFloatNumber);
+        // Float is single precision floating number
+        // float width is 32 bits
+        // it's not default, if we want to use it we hate co cast (float) or use f on the end
+        
+        double maxDoubleNumber = Double.MAX_VALUE; //1.7976931348623157E308
+        double minDoubleNumber = Double.MIN_VALUE; //4.9E-324
+//        System.out.println(maxDoubleNumber);
+//        System.out.println(minDoubleNumber);
+        // Double is double precision floating number
+        // double width is 64 bits
+        // its more precision than float, so its better to use it
+        // double is faster and math function works on it
+        // its default decimal number, but we can end it with d on the end
+
+
+        float firstFloatNumber = 10.00f;
+        double firstDoubleNumber = 10.00d;
+        int intNumberFloat = 10;
+//        System.out.println(firstFloatNumber / 3); //3.3333333
+        // tbh don't use float never
+//        System.out.println(firstDoubleNumber / 3); //3.3333333333333335
+        //best precision
+//        System.out.println(intNumberFloat / 3); //3
+        // cutting every number after decimal point
+
+        float dividedFloat = 10f / 4; //2.5
+//        System.out.println(dividedFloat);
+
+        float twoPlusThreeFloat = 0.1f + 0.2f; // 0.3
+//        System.out.println(twoPlusThreeFloat);
+        double twoPlusThreeDouble = 0.1d + 0.3d; // 0.4
+//        System.out.println(twoPlusThreeDouble);
+
+    // Challenge pounds to kilograms variable
+        double poundsVar = 254;
+        double poundsToKilograms = poundsVar * 0.45359237d;
+        System.out.println(poundsToKilograms);
         }
+        
+        
