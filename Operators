@@ -1,0 +1,27 @@
+public class Operators {
+    public static void main(String[] args){
+        // operators are symbols that lead and operations on operands'
+        // operand is an value that is manipulated by operators'
+        // expression is a result of manipulating on operands
+        int sumOperator = 5 + 5; //10
+        int differenceOperator = 10 - 5; //5
+        int multiplicationOperator = 10 * 5; //50
+        int divisionOperator = 10 / 5; //2
+        int remainderOperator = 17 % 5; //2
+            // 17 / 5 = 3 rest 2;
+
+        int incrementingVar = 1;
+        incrementingVar++;
+//        System.out.println(incrementingVar); //2
+        int decrementingVar = 2;
+        decrementingVar--;
+//        System.out.println(decrementingVar); //1
+
+        //abbreviated operators
+        int abbrOperatorVarEx = 10;
+        abbrOperatorVarEx += 5; //15
+        abbrOperatorVarEx -= 10; //5
+        abbrOperatorVarEx *= 10; // 50
+        abbrOperatorVarEx /= 5; // 10
+    }
+}
