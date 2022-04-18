@@ -1,0 +1,31 @@
+public class Strings {
+    public static void main(String[] args){
+        String firstStringVar = "Hello";
+//        System.out.println(firstStringVar); //Hello
+        //string syntax
+        // string is not a primitives, it's a class
+        // max numbers of string characters is limited by int memory, that is 2147483647
+        firstStringVar = firstStringVar + " World";
+//        System.out.println(firstStringVar); //Hello World
+        firstStringVar = firstStringVar + " Everyone";
+//        System.out.println(firstStringVar); //Hello World Everyone
+        // code read it as: var is var (till the point of execution) + rest
+        // from now var == var from before + rest
+        firstStringVar = firstStringVar + " \u2605";
+//        System.out.println(firstStringVar); //Hello World Everyone ★
+        // unicode is supported
+
+        // String in java are not mutable
+        //accessing to existing sting variable, will not change it but make a changed copy of it
+        // while the existed one is deleted
+        String stringSumInt = "15";
+        int intPlusString = 15;
+//        System.out.println(stringSumInt + intPlusString); //1515
+        // String + int = string
+
+
+        //
+
+    }
+
+}
