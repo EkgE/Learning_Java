@@ -1,0 +1,28 @@
+public class if_then {
+    public static void main(String[] args){
+
+
+        boolean trueVar = true;
+        if (trueVar) {
+            System.out.println("true");
+        }
+        // if statement check if expression is true, if it is, it will execute code-block
+        // it's important to wrap if statement in code block
+
+        boolean falseVar = false;
+        if (falseVar);
+            System.out.println("false");
+        // it execute, because semicolon after if closes if statement, and sout is different lne of code without link to if
+
+        if (falseVar)
+        System.out.println("second false"); //doesnt work
+        System.out.println("will it work?"); //work
+        // second sout work, because if we won't use code-block
+        // if without curly braces can execute only one line of code
+
+
+
+
+
+    }
+}
