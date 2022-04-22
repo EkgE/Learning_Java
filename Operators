@@ -3,6 +3,9 @@ public class Operators {
         // operators are symbols that lead and operations on operands'
         // operand is an value that is manipulated by operators'
         // expression is a result of manipulating on operands
+
+        //----- ARITHMETIC OPERATORS AND UNARY OPERATORS
+
         int sumOperator = 5 + 5; //10
         int differenceOperator = 10 - 5; //5
         int multiplicationOperator = 10 * 5; //50
@@ -23,5 +26,59 @@ public class Operators {
         abbrOperatorVarEx -= 10; //5
         abbrOperatorVarEx *= 10; // 50
         abbrOperatorVarEx /= 5; // 10
+
+        //-------- EQUALITY AND RELATIONAL OPERATORS
+
+        int testVar = 50;
+
+        if(testVar == 50){
+            System.out.println("equal");
+        } // == checks if both values are equal
+
+        if(testVar != 90){
+            System.out.println("not equal");
+        } // != checks if both values are not equal
+
+        boolean testBooleanVar = false;
+        if(!testBooleanVar){
+            System.out.println("negative");
+        }//
+
+        if(testVar > 40){
+            System.out.println("greater");
+        } // > checks if left value is greater than right one
+
+        if(testVar < 60){
+            System.out.println("lesser");
+        } // < checks if left value is lesser than right one
+
+        if(testVar >= 50){
+            System.out.println("greater equal ");
+        } // >= checks if left value is greater or equal to the right one
+
+        if(testVar <= 50){
+            System.out.println("lesser equal ");
+        } // <= checks if left value is lesser or equal to the right one
+
+
+        //---------LOGICAL OPERATORS
+
+        if((testVar > 40) && (testVar < 60)){
+            System.out.println("both true");
+        } //&&(AND) checks both test, if both of them are true, return true
+
+        if((testVar > 40) || (testVar < 45)){
+            System.out.println("at least one true");
+        } // ||(OR) checks both tests, if at least one of them is true, return true
+
+        // it's good practice to add second parenthesis using OR or AND operators
+        //doesn't change in meaning, but it's easier to read
+
+        int testVarOne = 100;
+        String ternaryOperator = testVarOne > 50 ? "Bigger than 50" : "Lower than 50";
+        // ternary operator if the value before ? is true, return first value
+        System.out.println(ternaryOperator);
+
+
     }
 }
