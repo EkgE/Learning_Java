@@ -1,5 +1,5 @@
 public class Readibility {
-    public static void main(Strings[] args){
+    public static void main(String[] args){
         //Keywords are words in programming language that are reserved and cannot be used as names
         // public, int, boolean etc.
 //        int boolean = 25; //unexpected token error
@@ -23,15 +23,6 @@ if(true){System.out.println("not indented");
 expressionVar++;} // works good, hard to read
 // we can reformat code, to make easier to read by code>reformat code
 
-        int varExample = 15;
-        if(varExample > 15){
-            int varExample2 = varExample + 15;
-            varExample = 30;
-        }
-        //System.out.println(varExample2); // wont work
-        //varExample2 is local variable, declared in code block
-        // we cant acces to local variable's outside code blocks
-        System.out.println(varExample);
 
 
 
