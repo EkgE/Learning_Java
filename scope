@@ -1,0 +1,13 @@
+public class scope {
+    public static void main(String[] args){
+        int varExample = 15;
+        if(varExample >= 15){
+            int varExample2 = varExample + 15;
+            varExample = varExample + 15;
+        }
+        //System.out.println(varExample2); // wont work
+        //varExample2 is local variable, declared in code block
+        // we cant acces to local variable's outside code blocks
+        System.out.println(varExample); //30
+        // but global variable is modified by code block
+    }
