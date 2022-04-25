@@ -21,7 +21,17 @@ public class Readibility {
         // indentation is not necessary
 if(true){System.out.println("not indented");
 expressionVar++;} // works good, hard to read
-// we can reformat code, to make easier to read by code>reormat code
+// we can reformat code, to make easier to read by code>reformat code
+
+        int varExample = 15;
+        if(varExample > 15){
+            int varExample2 = varExample + 15;
+            varExample = 30;
+        }
+        //System.out.println(varExample2); // wont work
+        //varExample2 is local variable, declared in code block
+        // we cant acces to local variable's outside code blocks
+        System.out.println(varExample);
 
 
 
