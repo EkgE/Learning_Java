@@ -1,0 +1,60 @@
+public class Methods {
+    public static void main(String[] args){ // this is method called main, all code in it will be executed
+        //method can be called function
+        methodExample(); // method execution
+        methodExample2(30, 25, 5); // method with parameters can be reused with specified values called arguments
+//        methodExample2(); // its error, IDE demand arguments for this method, we can't use it without them
+
+        int argument1 = 10;
+        int argument2 = 20;
+        int argument3 = 10;
+        methodExample2(argument1, argument2, argument3); // we can use variables as arguments
+
+        int methodExample4Var = methodExample4(5, 3); // variable's value is outcome of method
+//        System.out.println(methodExample4Var); // 8
+        int methodExample4VarError = methodExample4(-2, 10); // wrong values, so it returns -1
+//        System.out.println(methodExample4VarError); // -1
+
+
+
+    }
+    public static void methodExample(){ //another method called methodExample
+        int methodExampleVar1 = 15;
+        int methodExampleVar2 = 30;
+        int methodExampleVar3 = 5;
+
+        int methodExampleVarResult = (methodExampleVar1 + methodExampleVar2) / methodExampleVar3;
+        System.out.println(methodExampleVarResult);
+
+        // this method is bad, because we declare all variables in codeblock, so it only print result of (15 + 30) / 5
+        // if we want to reuse this method but with different values, we have to change them in method codeblock
+        // its not optional, because we can't use that method different situatio
+    }
+    public static void methodExample2(int methodExampleVar1, int methodExampleVar2, int methodExampleVar3){
+        int methodExampleVarResult = (methodExampleVar1 + methodExampleVar2) / methodExampleVar3;
+        System.out.println(methodExampleVarResult);
+        // we can declare variables used in method in parenthesis
+        // those variables are called parameters
+        // we can assign those parameters while we call method, so its flexible for other purposes
+        // those assigned parameters are called arguments
+
+    }
+    // void in method means that it don't return any values
+    // other name for void is procedure
+    // if method is returning values, instead of void we have to use type of data int, string etc
+    public static int methodExample3(int methodExampleVar1, int methodExampleVar2){
+        return methodExampleVar1 + methodExampleVar2; // return is obligatory in those types of methods
+    }
+
+    public static int methodExample4(int methodExampleVar1, int methodExampleVar2){
+        if(methodExampleVar1 > 0 ){
+            return methodExampleVar1 + methodExampleVar2;
+        }
+        return -1;
+    } // this method gave error without return -1;
+    // in method that returns value, we always have to return value
+    // in methodExample4 returning is conditional, if methodExampleVar1 > 0, wasn't true, method won't return anything
+    // so we have to put another return if the first one won't execute
+    // we always use -1 as last return
+    // it's agreed to use -1 as indicated error like invalid value or value not found
+}
