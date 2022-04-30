@@ -1,0 +1,30 @@
+public class Readibility {
+    public static void main(String[] args){
+        //Keywords are words in programming language that are reserved and cannot be used as names
+        // public, int, boolean etc.
+//        int boolean = 25; //unexpected token error
+
+        //expression is a construct made of variables, values, methods and operators, that return a single value
+
+        int expressionVar = 100;// its a expression
+        if (expressionVar == 100){ // it's a expression
+            System.out.println("expression!"); //it's a expression
+        }
+
+        // Statement is a single unit of execution that ends with semicolon ;
+        // statements can be executed on single line (preferred, to read easily, but can be stacked too)
+        expressionVar++; expressionVar--; expressionVar = 232;
+
+        //white space is space between words, that is skipped
+        // indentation makes things easier to read
+        // nested code blocks are indented
+        // indentation is not necessary
+        if(true){System.out.println("not indented");
+            expressionVar++;} // works good, hard to read
+// we can reformat code, to make easier to read by code>reformat code
+
+
+
+
+    }
+}
