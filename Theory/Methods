@@ -57,4 +57,28 @@ public class Methods {
     // so we have to put another return if the first one won't execute
     // we always use -1 as last return
     // it's agreed to use -1 as indicated error like invalid value or value not found
+    
+    
+    /    ------------OVERLOADING METHODS------------------
+    //method overloading is using the same name of method but with different parameters
+    public static String methodOverload(int number){
+        return "Number is" + number;
+    }
+    public static String methodOverload(String string){
+        return "String is" + string;
+    }
+    public static String methodOverload(){
+        return "Nothing";
+    }
+//    public static int methodOverload(int number){ // doesn't work
+//        return number;
+//    }
+//    public static void methodOverload(){  //doesn't work
+//        System.out.println("void nothing");
+//    }
+//    public static String methodOverload(int anotherNumber){
+//        return "Number is" + anotherNumber;
+//    }
+    // these two doesn't work, cause type of returned class and names of parameters can't differ method fom others
+    // only type parameters can do it
 }
