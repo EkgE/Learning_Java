@@ -1,4 +1,10 @@
 public class IntegarsBiteShortLong {
+    
+        public static final String CONSTANT_VARIABLE = "constant var"; //  syntax for constant 
+        // constant variable are declared by final 
+        // they're written by uppercase snake syntax
+        // they can't be changed through coding
+        
     public static void main(String[] args){
         int numberIntegarMax = Integer.MAX_VALUE; // 2147483647
         int numberIntegarMin = Integer.MIN_VALUE; //-2147483648
