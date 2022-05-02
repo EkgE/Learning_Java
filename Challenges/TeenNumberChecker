@@ -1,0 +1,25 @@
+public class TeenNumberChecker {
+    public static void main(String[] args){
+
+    }
+    public static boolean hasTeen(int firstPar, int secondPar, int thirdPar){
+        if (
+                firstPar >= 13 && firstPar <= 19 ||
+                secondPar >= 13 && secondPar <= 19 ||
+                thirdPar >= 13 && thirdPar <= 19
+        ) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+    public static boolean isTeen(int checkValue){
+        if ( checkValue >= 13 && checkValue <= 19 ){
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+}
