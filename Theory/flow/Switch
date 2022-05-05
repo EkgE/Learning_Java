@@ -1,0 +1,38 @@
+public class Switch {
+    public static void main(String[] args){
+        int testVar = 13;
+
+        switch (testVar){
+            case 1:
+                System.out.println("one");
+                break;
+            case 2:
+                System.out.println("two");
+                break;
+            default:
+                System.out.println("not one or two");
+                break;
+        } // switch statement syntax
+        // switch compare condition in parentheses to cases outcome
+        // if they are the same, switch execute case code block
+        // if any of cases doesn't equal condition, default will execute
+        // break is very important
+        // break indicate stop of executing
+        // if we don't use break after the case, all next cases will work aswell
+
+        // we can use types of byte, int, char, string, short
+
+        int testVar2 = 7;
+        switch(testVar2 - 3){
+            case 2:
+                System.out.println("testVar2 - 3 = 2");
+                break;
+            case 1: case 3: case 5:
+                System.out.println("multiple outcomes will fill");
+                break;
+            default:
+                System.out.println("default");
+                break;
+        } // we can use multiple cases with different comparisons, but with the same code block executed
+    }
+}
