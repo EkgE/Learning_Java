@@ -26,6 +26,16 @@ public class For {
             if(i % 2 == 0) break;
         } // if we want to execute loop till one condition that is not written in loop parenthesis
         // we use break, what means break the loop and don't execute anymore
+        
+         for(int i = 0; i <4; i++){
+            if(i % 2 == 0){
+                continue;
+            }
+            System.out.println(i); // if number is odd, than this statement is avoided, because continue is called
+        }
+        // continue work's differently than break
+        // if continue is stated, that other statements are avoided and loop returns to starting point
+
 
     }
 }
