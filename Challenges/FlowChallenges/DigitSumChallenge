@@ -1,0 +1,19 @@
+public class DigitSumChallenge {
+    public static final int INVALID_VALUE = -1;
+    public static void main(String[] args){
+    }
+    public static int sumDigits(int number){
+        int sumDigits = 0;
+        int lastDigit;
+        if(number < 10){
+            return INVALID_VALUE;
+        } else {
+            while(number > 0){
+                lastDigit = number % 10;
+                number = number / 10;
+                sumDigits += lastDigit;
+            }
+            return sumDigits;
+        }
+    }
+}
