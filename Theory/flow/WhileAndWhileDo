@@ -1,0 +1,46 @@
+public class WhileAndWhileDo {
+    public static void main(String[] args){
+        int whileVar = 0;
+        while(whileVar <4){
+            System.out.println("whileVar is "+ whileVar);
+            whileVar++; // by this loop will work only 4 times until whileVar < 4 isn't true
+        }
+//        whileVar is 0
+//        whileVar is 1
+//        whileVar is 2
+//        whileVar is 3
+
+        // while syntax is
+        // while(condition){ code block}
+        // while condition is fulfilled code block is executed
+        // it's important to add mechanism that disable condition
+        // without it the while will loop forever
+        int whileVar2 = 0;
+        while(true){ // condition is endlessly executed
+            if (whileVar2 == 4){
+                break; // work's the same as while as above loop, but work's with break
+            }
+            System.out.println("whileVar2 is " + whileVar2);
+            whileVar2++;
+        }
+
+        int whileDoesntWork = 0;
+        while (whileDoesntWork > 0){
+            System.out.println(whileDoesntWork);
+        } //Doesn't execute, condition is false
+
+        int doWhileVar = 0;
+        do {
+            System.out.println("doWhileVar = " + doWhileVar);
+        } while(doWhileVar > 0); //doWhileVar = 0
+        // syntax is do{} while();
+        // doWhile execute at least once code block
+        // it's important to match do codeblock with while test, because for example
+//        do {
+//            System.out.println("doWhileVar = " + doWhileVar);
+//            doWhileVar++;
+//        } while (doWhileVar != 0);
+        // its endless loop
+    }
+
+}
