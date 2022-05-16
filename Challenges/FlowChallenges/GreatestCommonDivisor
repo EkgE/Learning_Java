@@ -1,0 +1,30 @@
+public class GreatestCommonDivisor {
+    public static void main(String[] args){
+        System.out.println(euclidAlgorithm(31487, 21933));
+
+
+    }
+    public static int bruteForce(int x, int y){
+        if (x < 10 | y < 10) return -1; // test value greater than 10
+
+        for(int i = x; i > 1; i--){ // don't need to count divisor, because it's being reduced
+            if(x % i == 0 ){ // looping for all numbers in range x to 1 to find divisor
+              for (int j = y; j > 1; j--) // looping for all numbers y to 1 to find divisor
+                  if(i == j && y % j == 0){ // test if divisor of y is also divisor of x
+                      return i;
+                  }
+            }
+        }
+        return -1;
+
+    }
+
+    public static int euclidAlgorithm(int x, int y){
+        if (x < 10 | y < 10) return -1;
+        while(x != y){
+            if(x > y) x -= y; //
+            else y -= x;
+        } // if one number is bigger than other one, subtract bigger wih smaller one, until they're equal
+        return x;
+    }
+}
