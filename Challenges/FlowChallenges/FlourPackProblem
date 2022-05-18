@@ -1,0 +1,24 @@
+public class FlourPackProblem {
+    static public void main(String[] args) {
+
+    }
+
+    static public boolean canPackSol1(int bigCount, int smallCount, int goal) {
+        if (bigCount < 0 || smallCount < 0 || goal < 0) return false;
+        if(goal <= (bigCount * 5) + smallCount){
+                if(goal % 5 == 0) return true;
+                else {
+                    return goal % 5 <= smallCount;
+                }
+        }
+        else return false;
+    }
+
+    static public boolean canPackSol2(int bigCount, int smallCount, int goal) {
+        if (bigCount < 0 || smallCount < 0 || goal < 0) return false;
+
+        return(goal <= (bigCount * 5) + smallCount) && (goal % 5 <= smallCount);
+    }
+}
+
+
