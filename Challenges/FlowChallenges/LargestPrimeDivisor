@@ -1,0 +1,36 @@
+public class LargestPrime {
+    public static final int INVALID_VALUE = -1;
+    static public void main(String[] args){
+
+        System.out.println(getLargestPrimeBest(217));
+
+    }
+//    public static int getLargestPrimeMine(int number){
+//        if (number < 2  ) return INVALID_VALUE;
+//
+//        int largestPrimeDivisior = -1;
+//        for(int i = 2; i <= number; i++){
+//            if(number % i == 0){
+//                int numberOfDivisiors = 0;
+//                for (int j = 1; j <= i ; j ++){
+//                    if(i % j == 0) numberOfDivisiors++;
+//                }
+//                if(numberOfDivisiors < 3) largestPrimeDivisior = i;
+//            }
+//
+//        }
+//        return largestPrimeDivisior;
+//    }
+    public static int getLargestPrimeBest(int number){
+        if (number < 2) return INVALID_VALUE;
+
+        for(int i = 2; i < number; i++){
+            System.out.println("Number is " + number + " I is " + i);
+            if(number % i == 0) {
+                number /= i;
+                i--;
+            }
+        }
+        return number;
+    }
+}
