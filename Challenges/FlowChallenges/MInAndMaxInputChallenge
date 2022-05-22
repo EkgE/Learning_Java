@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class MInAndMaxInputChallenge {
+    public static void main(String[] ars){
+        Scanner scanner = new Scanner(System.in);
+        int MaxNumber = Integer.MIN_VALUE;
+        int MinNumber = Integer.MAX_VALUE;
+
+
+        while(true){ // endless loop
+            System.out.println("Enter number"); // every loop starting with enter a number
+            boolean testVar = scanner.hasNextInt(); // test if int is provided
+            if (testVar) {
+                int number = scanner.nextInt(); //input
+                if (number > MaxNumber) MaxNumber = number; // max number is set as MIN_VALUE so if number is lower max number equal max
+//                else if(MinNumber == 0) MinNumber = number;
+//                else if(MaxNumber == 0) MaxNumber = number;
+                else if (MinNumber > number) MinNumber = number; // min number is set as MAX_VALUE so if number is lower max number equal max
+
+            }
+            else { // id hasNextInt gives false 
+                System.out.println("Invalid value");
+                System.out.println("Your maximum value is " + MaxNumber);
+                System.out.println("Your minimum value is " + MinNumber);
+                break;
+            }
+        }
+        scanner.close(); // closing input
+    }
+}
