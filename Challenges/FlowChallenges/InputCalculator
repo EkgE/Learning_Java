@@ -1,0 +1,22 @@
+import java.util.Scanner;
+// write a method, that add up all inputted integers and return's their sum and average
+public class InputCalculator {
+    public static void main(String[] args){
+
+    }
+
+    public static void inputThenPrintSumAndAverage(){
+        int sum = 0; // s sum of numbers variable
+        int count = 0; // count of loops variable
+        Scanner scann = new Scanner(System.in);
+
+        while(scann.hasNextInt()){
+                int inputedValue = scann.nextInt();
+                count++; // counting loops
+                sum += inputedValue; // adding correct inputs
+        }
+        long average = Math.round((double) sum / count); // calculating average,
+        //Math.round is giving long so either we cast it to int or declare variable with long 
+        System.out.println("SUM = " + sum + " AVG = " + average);
+    }
+}
