@@ -1,0 +1,87 @@
+public class PersonAsExample {// classes syntax // we declare class with upper first letter
+    //class can be described as user customized data
+
+    //public is access modified
+    //public means unrestricted access to the class
+
+    // class is a template for objects in java OOP
+// objects consist of state and behaviors
+// state are stored in fields like variables
+// behaviors are stored in methods
+    public int age;
+    private int weight;
+    private String name;
+    //always declaring fields as private
+    //declaration variable in class
+    //class variable are called member variables or fields
+    //class variables are state of class
+    //declaration of fields require access modifier like classes
+    // rule in java says that declared field should have private access modifier
+    //private allows to encapsulate
+    //encapsulation is covering, that representation of object would be hidden from outside object definition
+    // so only internals can access to class
+
+    //created methods in a class are bounded to all objects created from class
+//we can use code-generate to make setters, getters and constructors
+//------------SETTERS
+
+    public void setWeight(int weight) {
+        //public because we want to it to be available everywhere
+        //void, because it doesn't return anything, we want to overwrite variable in a target object
+        //always start those methods as set
+        //parameter should have the same primitive type as variable we want to initialize
+        this.weight = weight;
+        //it's very important to add this
+        // this allows us to initialize numberField declared as member variables
+        // without it, system would read it as updating parameter called the same
+    }
+
+    public void setAge(int age) {
+        if(age >= 0) {
+            this.age = age;
+        }
+    }
+    //setter's are important because by method we can personalize our fields by validation
+    // example above allows us to set only positive numbers in field age in object made from PersonAsExample class
+
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    //------------GETTERS
+    public int getAge() {
+        return age;
+    }
+// method started with get are used to call fields from objects
+
+    public int getWeight() {
+        return weight;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+
+    //------------CONSTRUCTOR
+    public PersonAsExample(int age, int weight, String name){
+        setAge(age); //this.age = age;
+        setWeight(weight); //this.weight = weight;
+        setName(name); //this.name = name;
+    } // this constructor call all fields in this class
+    //it's always public
+    //instead of using set after declaring new object we can use constructor
+    //constructor allows to initialize fields while declaring new object
+    //we can improve constructor by using seters instead of this.field = parameter
+    //good practise says it's better for using this.xxx = xxx instead of setxxx(xxx)
+
+    public PersonAsExample(){
+        this(24,80,"Default"); //it allows us to call multiple fields while using this constructor
+    }//this constructor doesn't have any parameters
+    // meaning of this is to make a constructor with default variables, that are used when nothing is initialized
+    // this in this PersonAsExample constructor call PersonAsExample with parameters and push into it arguments in this()
+
+
+
+}
