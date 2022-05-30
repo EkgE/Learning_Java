@@ -1,0 +1,40 @@
+public class ComplexNumber {
+    private double real;
+    private double imaginary;
+
+//    CONSTRUCTORS
+    public ComplexNumber(double real, double imaginary){
+        this.real = real;
+        this.imaginary = imaginary;
+    }
+//    GETERS
+
+    public double getReal() {
+        return this.real;
+    }
+
+    public double getImaginary() {
+        return this.imaginary;
+    }
+
+
+//    SETTERS
+    public void add(double real, double imaginary){
+        this.real += real;
+        this.imaginary += imaginary;
+    }
+    public void add(ComplexNumber ComplexNumber){
+        this.real += ComplexNumber.getReal();
+        this.imaginary += ComplexNumber.getImaginary();
+    }
+//    OTHERS
+    public void subtract(double real, double imaginary){
+        this.real -= real;
+        this.imaginary -= imaginary;
+    }
+    public void subtract(ComplexNumber ComplexNummber){
+        this.real -= ComplexNummber.getReal();
+        this.imaginary -= ComplexNummber.getImaginary();
+    }
+
+}
