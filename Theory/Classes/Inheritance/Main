@@ -1,0 +1,18 @@
+public class Main {
+    public static void main(String[] args) {
+        Subclass subclassObject = new Subclass("HelloSub", "HelloSubField");
+        // subclassObject fields:
+            // stringVariable = HelloSub
+            // integerVariable = 25 // because Subclass constructor called default value of this field as 25
+            // subclassString = HelloSubField
+        subclassObject.ClassMethod(); // this method was declared in Superclass, but Subclass inherit it
+//        Superclass method calling
+        subclassObject.OverriddenMethod();
+//        Superclass OverriddenMethod
+//        + Subclass OverriddenMethod
+
+        subclassObject.SubclassMethod("xyz");
+        //SubclassMethod + parameter xyz
+        //SuperclassMethod + parameter xyz
+    }
+}
