@@ -9,6 +9,7 @@ public class PersonAsExample {// classes syntax // we declare class with upper f
 // state are stored in fields like variables
 // behaviors are stored in methods
     public int age;
+    private int limbs;
     private int weight;
     private String name;
     //always declaring fields as private
@@ -82,6 +83,12 @@ public class PersonAsExample {// classes syntax // we declare class with upper f
     // meaning of this is to make a constructor with default variables, that are used when nothing is initialized
     // this in this PersonAsExample constructor call PersonAsExample with parameters and push into it arguments in this()
 
-
+// CLASS VS OBJECT VS INSTANCE VS REFERENCE
+    // Class is blueprint, like scheme/plans to build things with similar features
+    // Object is a specific thing made on those plans, with customized features
+    // Object can be called instance and vice-versa
+    // Reference is location of this made up object/instance
+        // we can refer to specific object multiple times, but it's still same object
+        // references can be passed as parameters
 
 }
