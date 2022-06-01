@@ -1,0 +1,37 @@
+public class OverloadingXOverriding extends Reference{
+    public OverloadingXOverriding(String color) {
+        super(color);
+    }
+
+    //METHOD OVERLOADING
+        public static void methodOverloading(String parameterOne){
+            System.out.println(parameterOne);
+        }
+    public static void methodOverloading(String parameterOne, String parameterTwo){
+        System.out.println(parameterOne + " " + parameterTwo);
+    }
+    //Method overloading is a process of providing a bunch of methods with same name, but different parameters
+    //overload methods may have different return type
+    // it allows to reuse name of method and avoid duplicating code
+    // typically used in a single class, but can be used also in inherited class, with same rules
+
+
+    //METHOD OVERRIDING
+        //Reference parent class have method     public void methodOverriding(String parameter)
+    @Override //it's obligatory while building overridden method
+    public void methodOverriding(String parameter){
+        System.out.println(parameter + " child class");
+    }
+    //overridden method is called also (those names are used, because JVM decides which method is going to be called (JVM is java virtue machine
+            //Runtime Polymorphism
+            //Dynamic Method Dispatch
+
+        //Overridden method is a method with same name and same parameters in a child class compared to parent class
+        // only methods in child class can be overridden, only inherited methods
+        //overridden methods can have different return type
+        // constructors and private methods can't be overridden
+        // by calling Object.methodOverridden() default method is the one in child
+        // if we want call superclass version of overridden method we need to use super.method()
+        // static, final methods can't be overridden
+
+}
