@@ -1,0 +1,18 @@
+public class InstanceANDStaticVariables {
+    static private String HelloButStatic;
+    // static variables are identical to every class instance
+    // by changing static field in one instance, all other instance will make the change
+    // static variables are called static member variables
+
+    public InstanceANDStaticVariables(String Hello) {
+        this.HelloButStatic = Hello;
+    }
+    public String setHello(){
+        return this.HelloButStatic;
+    }
+
+    private String HelloButInstance;
+    //instance variables are called fields or member variables
+    //every instance have  copy of instance variable, with specific value bounded to it
+    //instance variables represent a state of instance
+}
