@@ -1,0 +1,21 @@
+public class InstanceANDStaticMethods {
+    //static methods are declared with static keyword
+        // static can't access directly instance methods and variables
+        // used when this is not required, in other words, when they don't require any data from instance of class
+        //this is banned in static
+    // static methods can be called without creating new instance of class
+    // only name of the class.method is required
+    //if called within same class, name of the class. is not required
+    public static void HelloWorld(){
+        System.out.println("Hello World");
+    }
+    //instance methods belongs to instance of the class, so if we want to initialize it firstly we need to make instance of class
+    //instance can access instance and static methods and variables directly
+    //this keyword can be used
+    public void HelloUniverse(){
+        System.out.println("Hello Universe");
+    }
+
+    //essentially, if we want method to use instance methods or fields, we should go for instance method
+    // otherwise we should go for static
+}
