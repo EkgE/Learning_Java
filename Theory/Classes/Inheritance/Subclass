@@ -1,0 +1,38 @@
+public class Subclass extends Superclass{
+    //keyword extends allow to make inheritated class
+    // basically Subclass is child to parent Superclass
+
+    private String subclassString; // field specific to this class
+    // others constructors integerVariable, stringVariable are specific for Superclass
+    // all subclasses inherit those fields
+
+    //Those rules applies also to methods
+    // we can use methods not initialized in subclass but superclass
+
+    public Subclass(String stringVariable, String subclassString) {
+        super(stringVariable, 25); //super means call from superior class
+        // we initialize integerVariable as 25, so all object made from this subclass using Constructor will have
+        // integerVariable set as 25
+        // we can use it as default starting value to inherited field
+        this.subclassString = subclassString; // subclass field initialized traditionally
+    }
+    // this constructor call constructor from superclass public Superclass(String stringVariable, int integerVariable)
+    // field subclassString is specific to this class, so super won't call it
+
+
+@Override // we should use this symbol as overriding methods
+    public void OverriddenMethod() {
+        super.OverriddenMethod(); // by this we can refer to superclass method, while calling method with same name
+    // without it, it would crash because system will loop making going from OverriddenMethod to OverriddenMethod
+    System.out.println(" + Subclass OverriddenMethod ");
+    // by using this we extend made methods with subclass content
+
+    }
+    public void SubclassMethod (String xyz){
+        System.out.println("SubclassMethod + parameter xyz");
+        SuperclassMethod("xyz"); // we can access to parent class by calling it in child class
+        //or we can use super keyword
+        //it's better not to use super keyword, because if later someone would override that method, it will track parent method
+        //instead of overridden method in child class
+    }
+}
