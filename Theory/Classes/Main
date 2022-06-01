@@ -28,7 +28,22 @@ public class Main {
 //        System.out.println(thirdPerson.getAge() + " " + thirdPerson.getWeight() + " "+  thirdPerson.getName()); //24 80 Default
 
         PersonAsExample fourthPerson = new PersonAsExample(40, 60, "Aneta");
-        System.out.println(fourthPerson.getAge() + " " + fourthPerson.getWeight() + " "+  fourthPerson.getName()); //40 60 Aneta
+//        System.out.println(fourthPerson.getAge() + " " + fourthPerson.getWeight() + " "+  fourthPerson.getName()); //40 60 Aneta
 
+//----- REFFERENCE
+        Reference BlueThing = new Reference("");
+        //Blue thing is a reference to instance of Refference class
+
+        BlueThing.setColor("Blue");
+//               System.out.println(BlueThing.getColor());  //Blue
+
+        Reference RedThing = BlueThing;
+        // now RedThing is also a reference to same instance as BlueThing
+
+        RedThing.setColor("Red");
+        // we change field in instance that RedThing and BlueThing refer to
+                System.out.println(BlueThing.getColor());  //Red
+                System.out.println(RedThing.getColor());  //Red
+        // both of them are changed
     }
 }
