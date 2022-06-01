@@ -1,0 +1,11 @@
+public class Reference {
+    private String color;
+    public void setColor(String color) {this.color = color;}
+    public String getColor() {return color;}
+    public Reference(String color){
+        this.color = color;
+    }
+    public void methodOverriding(String parameter){
+        System.out.println(parameter + " parent class");
+    }
+}
