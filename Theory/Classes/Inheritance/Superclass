@@ -1,0 +1,37 @@
+public class Superclass {
+
+    private String stringVariable;
+    private int integerVariable;
+//Constructor
+    public Superclass(String stringVariable, int integerVariable) {
+        this.stringVariable = stringVariable;
+        this.integerVariable = integerVariable;
+    }
+
+    //Getters
+    public String getStringVariable() {
+        return stringVariable;
+    }
+
+    public int getIntegerVariable() {
+        return integerVariable;
+    }
+//Setters
+    public void setStringVariable(String stringVariable) {
+        this.stringVariable = stringVariable;
+    }
+
+    public void setIntegerVariable(int integerVariable) {
+        this.integerVariable = integerVariable;
+    }
+// Random Methods
+    public void ClassMethod(){
+        System.out.println("Superclass method calling ");
+    }
+    public void OverriddenMethod(){
+        System.out.println("Superclass OverriddenMethod");
+    }
+    public void SuperclassMethod (String xyz){
+        System.out.println("SuperclassMethod + parameter xyz");
+    }
+}
