@@ -1,0 +1,27 @@
+public class superXthis  extends Reference{
+    //this is a keyword used to refer to current Class
+    //super is a keyword used to refer to parent's Class
+            // they can't be used in static areas
+
+    String PetOne = "dog";
+    String PetTwo = "Cat";
+    public superXthis(String PetOne, String PetTwo){
+        super("Pink");// in this example we call parent constructor with parameter "Pink" to initialize parent field color
+        this.PetOne = PetOne;
+        this.PetTwo = PetTwo;
+    }
+    public superXthis(){
+        this("Horse", "Snake"); // in example constructor this() is calling other constructor with parameters "Horse" and "Snake"
+        // basically is eqaul to superXthis("Horse", "Snake")
+    }
+
+    // this() vs super()
+        //this() is mostly used to call another overload method, with specified parameters
+        //by using this() we not dupliate code
+        //super() is used to call parent constructor
+        //super() must be first statement in constructor
+    //they can't be used both in a constructor
+
+
+
+}
