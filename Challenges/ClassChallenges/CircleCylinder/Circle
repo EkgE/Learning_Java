@@ -1,0 +1,15 @@
+public class Circle {
+    private double radius;
+//    Constructor
+    public Circle(double radius){
+        this.radius = radius < 0 ? 0 : radius;
+    }
+//    Getters
+    public double getRadius(){
+        return this.radius;
+    }
+//    Area
+    public double getArea(){
+        return this.radius * this.radius * Math.PI;
+    }
+}
