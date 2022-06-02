@@ -1,0 +1,55 @@
+import java.util.Scanner;
+//scanner is a class!
+
+public class UserInput {
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in); // object scanner called with new
+        // System.in is argument of object
+        // is input stream, that uses input from user
+        // contrary to System.out that is output stream
+
+//        String stringInput = scan.nextLine(); // method next line
+        //next line return string, so if we bound it to a variable, variable have to be string type
+        // it prevents from  going to next line in the terminal, until input is inserted
+
+//        int intInput = scan.nextInt(); // same as above, but returns int type
+//        boolean booleanInput = scan.nextBoolean();
+//        byte byteInput = scan.nextByte();
+//        short shortInput = scan.nextShort();
+//        double doubleInput = scan.nextDouble();
+//        long longInput = scan.nextLong();
+//        float floatInput = scan.nextFloat();
+
+//        String name = scan.nextLine();
+//        System.out.println("Name is = " + name);
+//        int age = scan.nextInt();
+//        System.out.println("Age is = " + age);
+//        int children = scan.nextInt();
+//        System.out.println("Number of children = " + children);
+//        String childrenNames = scan.nextLine();
+//        System.out.println(childrenNames); // after this one is gap
+//        // it's because every time we input values system read them as xxx/n when /n is entered
+//        // when we reach another system would skip it, because of /n made from two input's before
+//        // its happening when we're using String and other primitives as imputes
+//        // to prevent from happening system is making invisible nextLine() that is skipped from generated /n
+//        // so it's making a gap
+//        double height = scan.nextInt();
+//        System.out.println("Height is = " + height);
+
+//        double seperateSign = scan.nextDouble(); // we're using as separator sign
+//        // writing with dot is invalid and return error
+//        scan.useLocale(Locale.CANADA); // chaning our locale to canade, where dot is used
+//        double seperateSignSecond = scan.nextDouble(); // writing with dot doesn't give error, but with coma does
+
+        boolean testInput = scan.hasNextInt(); // if next input is int it gives true, while not affect output
+        if(testInput){
+            int testedInt = scan.nextInt();
+            System.out.println("True");
+        }
+        else System.out.println("False");
+        //using this syntax we can avoid error
+        //if testedInt wasn't in if the wrong input would give error
+        //meanwhile it returns if codeblocks, so we can write code that still be executed even if error appear somewhere
+
+    }
+}
