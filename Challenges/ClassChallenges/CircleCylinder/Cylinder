@@ -1,0 +1,16 @@
+public class Cylinder extends Circle{
+    private double height;
+//    Constructor
+    public Cylinder(double radius, double height){
+        super(radius);
+        this.height = height < 0 ? 0 : height;
+    }
+//    Getters
+    public double getHeight(){
+        return this.height;
+    }
+// Volume
+    public double getVolume(){
+        return getArea() * height;
+    }
+}
