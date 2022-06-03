@@ -1,0 +1,22 @@
+public class Engine {
+    private int yearOfProduction;
+    private int cylinders;
+    private String fuel;
+    public Engine(int yearOfProduction, int cylinders, String fuel){
+        this.yearOfProduction = yearOfProduction;
+        this.cylinders = cylinders;
+        this.fuel = fuel;
+    }
+    public int getYearOfProduction() {
+        return yearOfProduction;
+    }
+    public int getCylinders() {
+        return cylinders;
+    }
+    public String getFuel() {
+        return fuel;
+    }
+    public void soundOfEngine(){
+        System.out.println("Wroom Wroom");
+    }
+}
