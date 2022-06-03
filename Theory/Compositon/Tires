@@ -1,0 +1,21 @@
+public class Tires {
+    private String type;
+    private String tread;
+    private Wheels wheels;
+    public Tires(String type, String tread){
+        this.type = type;
+        this.tread =  tread;
+
+    }
+
+    public void changeTires(){
+        System.out.println("Change tires on summer");
+    }
+    private void producerOfTires(){
+        System.out.println("Producer of tires is continental");
+    }
+    public void areTiresOriginal(){
+        System.out.println("yes");
+        producerOfTires();
+    }
+}
