@@ -1,0 +1,20 @@
+public class Wardrobe {
+    private String clothes;
+    private int numberOfDrawers;
+    private int height;
+
+    public Wardrobe(String clothes, int numberOfDrawers, int height) {
+        this.clothes = clothes;
+        this.numberOfDrawers = numberOfDrawers;
+        this.height = height;
+    }
+    public String getClothes() {
+        return clothes;
+    }
+    public int getNumberOfDrawers() {
+        return numberOfDrawers;
+    }
+    public int getHeight() {
+        return height;
+    }
+}
