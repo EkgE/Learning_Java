@@ -1,0 +1,23 @@
+public class Room {
+    Wardrobe wardrobe;
+    Bed bed;
+    NightStand NightStand;
+
+    public Wardrobe getWardrobe() {
+        return wardrobe;
+    }
+
+    public Bed getBed() {
+        return bed;
+    }
+
+    public NightStand getNightStand() {
+        return NightStand;
+    }
+
+    public Room(Wardrobe wardrobe, Bed bed, NightStand nightStand) {
+        this.wardrobe = wardrobe;
+        this.bed = bed;
+        NightStand = nightStand;
+    }
+}
