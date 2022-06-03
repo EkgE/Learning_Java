@@ -1,0 +1,12 @@
+public class Main {
+    public static void main(String[] args) {
+        Bed bed = new Bed("3,5m", "Normal", 2 , new BedSheets("Blue", 7));
+        Wardrobe wardrobe = new Wardrobe("Underwear", 8, 3);
+        NightStand nightStand = new NightStand("Swedish", 2, new Lamp(true, "Yellow"));
+        Room room = new Room(wardrobe, bed, nightStand);
+
+        System.out.println(room.getBed().getBedSheets().Cleaned());
+        System.out.println(room.getNightStand().getLamp().getOn());
+
+    }
+}
