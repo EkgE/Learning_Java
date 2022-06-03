@@ -1,0 +1,22 @@
+public class BedSheets {
+    private String colour;
+    private int HowManyDaysAgoWasSheetsWashed;
+
+    public String getColour() {
+        return colour;
+    }
+    public int getHowManyDaysAgoWasSheetsWashed() {
+        return HowManyDaysAgoWasSheetsWashed;
+    }
+    public BedSheets(String colour, int HowManyDaysAgoWasSheetsWashed) {
+        this.colour = colour;
+        this.HowManyDaysAgoWasSheetsWashed = HowManyDaysAgoWasSheetsWashed >= 0 && HowManyDaysAgoWasSheetsWashed < 8 ? HowManyDaysAgoWasSheetsWashed : -1;
+    }
+    private boolean areSheetsClean(){
+        return HowManyDaysAgoWasSheetsWashed != -1;
+    }
+    public String Cleaned(){
+        return areSheetsClean() ? "yes" : "NO";
+    }
+
+}
