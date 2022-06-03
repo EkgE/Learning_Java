@@ -1,0 +1,24 @@
+public class Car {
+    private String model;
+    private Engine engine;
+    private Body body;
+    private Wheels wheels;
+    public Car(String model, Engine engine, Body body, Wheels wheels) {
+        this.model = model;
+        this.engine = engine;
+        this.body = body;
+        this.wheels = wheels;
+    }
+    public String getModel() {
+        return model;
+    }
+    public Engine getEngine() {
+        return engine;
+    }
+    public Body getBody() {
+        return body;
+    }
+    public Wheels getWheels() {
+        return wheels;
+    }
+}
