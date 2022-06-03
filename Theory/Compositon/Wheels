@@ -1,0 +1,24 @@
+public class Wheels {
+    private int numbers;
+    private int diameter;
+    private String rims;
+    private Tires tires;
+    public Wheels(int numbers, int diameter, String rims, Tires tires) {
+        this.numbers = numbers;
+        this.diameter = diameter;
+        this.rims = rims;
+        this.tires = tires;
+    }
+    public int getNumbers() {
+        return numbers;
+    }
+    public int getDiameter() {
+        return diameter;
+    }
+    public String getRims() {
+        return rims;
+    }
+    public Tires getTires(){
+        return tires;
+    }
+}
