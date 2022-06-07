@@ -1,0 +1,15 @@
+public class distanceBetweenCoordinates {
+        public static void main(String[] args){
+            System.out.println(distanceBetweenCoordinates(25,35,35.5,25.5));
+        }
+   
+    public static double distanceBetweenCoordinates(double x1, double y1, double x2, double y2 ){
+        final double earthRadius =  6371.01d;
+        x1 = Math.toRadians(x1);
+        y1 = Math.toRadians(y1);
+        x2 = Math.toRadians(x2);
+        y2 = Math.toRadians(y2);
+        return earthRadius * Math.acos(Math.sin(x1) * Math.sin(x2) + Math.cos(x1) * Math.cos(x2) * Math.cos(y1 - y2));
+    }
+}
+    
