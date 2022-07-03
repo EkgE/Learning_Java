@@ -1,0 +1,16 @@
+public class Leaf extends Plant {
+    private String type;
+    private String shape;
+    private int size;
+
+    public Leaf(int size, int numberOfBranches, String species, String type, String type1, String shape, int size1) {
+        super(size, numberOfBranches, species, type);
+        this.type = type1;
+        this.shape = shape;
+        this.size = size1;
+    }
+
+    public void photoshynthesis(boolean water, boolean light) {
+        if (water && light) System.out.println("Leaf produce energy");
+    }
+}
