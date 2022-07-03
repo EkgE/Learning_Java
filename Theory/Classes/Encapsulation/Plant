@@ -1,0 +1,53 @@
+public class Plant {
+    private int height;
+    private int numberOfBranches;
+    private String species;
+    private String type;
+
+//                  CONSTRUTOR
+    public Plant(int size, int numberOfBranches, String species, String type){
+        this.height = size;
+        this.numberOfBranches = numberOfBranches;
+        this.species = species;
+        this.type = type;
+    }
+//          SETTERS
+    public void setHeight(int height) {
+        this.height = height;
+    }
+
+    public void setNumberOfBranches(int numberOfBranches) {
+        this.numberOfBranches = numberOfBranches;
+    }
+
+    public void setSpecies(String species) {
+        this.species = species;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+//         GETTERS
+    public int getHeight() {
+        return height;
+    }
+
+    public int getNumberOfBranches() {
+        return numberOfBranches;
+    }
+
+    public String getSpecies() {
+        return species;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void photoshynthesis(boolean water, boolean light){
+        if(water == true && light == true){
+            System.out.println("Plant produce energy");
+        }
+
+    }
+}
