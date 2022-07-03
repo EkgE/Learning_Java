@@ -24,6 +24,12 @@ public class PersonAsExample {// classes syntax // we declare class with upper f
 
     //created methods in a class are bounded to all objects created from class
 //we can use code-generate to make setters, getters and constructors
+
+    private int minimumAge = 0;
+    // we can declare field with assigned value to it
+        //it's helpfull, because we can than use it as default value, if condition won't be fulfilled while initialization
+            // example, by calling constructor if (minimumAge >= 0) this.minimumAge = age;
+                // that means, if minimumAge in constructor would be bellow 0, default value will be 0;
 //------------SETTERS
 
     public void setWeight(int weight) {
