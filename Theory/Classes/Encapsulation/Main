@@ -1,0 +1,26 @@
+public class Main {
+    public static void main(String[] args) {
+        Plant Monstera = new Plant(30, 8, "Monstera", "Monstera Deliciosa");
+        //encapsulation mean enclosing something to prevent access from outer layers
+            //it happens by writing fields as private
+            // that prevent to access them by calling them
+                // for example Monstera.size = 30; gives error
+                // so if we want to change field od this instance we shoud use seters
+            // benefits of encapsulations are:
+                //it's protecting from unintentional changes on fields
+
+                // by changing code that use specific field, we don't have to change every invocation, only used in class
+                            //        if our fields are changed in some code blocks, while using Monstera.size, when we change that field, all invocation of this would gave error, while setters and constructors not
+                            //        we can change it by marking value, pick refractor and change name
+                            //        this way, all uses of word, would change by our will
+//                          //        with public names, we would have to change every invocation in every files
+                // we can set rules, that need to apply while using fiedls
+                            //        fo example, if our plant should have max height of 50, we can set this rule in constructor or setters,
+                            //        which is much easier to use, instead of writing notes and rememberint them
+
+        System.out.println(100 % 6);
+
+        Leaf MonsteraLeaf = new Leaf(Monstera.getHeight(), Monstera.getNumberOfBranches(), Monstera.getSpecies(), Monstera.getType(), "normal", "oval", 20 );
+        MonsteraLeaf.photoshynthesis(true, true);
+    }
+}
