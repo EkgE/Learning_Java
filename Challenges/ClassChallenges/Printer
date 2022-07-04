@@ -1,0 +1,55 @@
+public class Printer {
+    private double tonerLevel = 0d;
+    private int numberOfPagesPrinted;
+    private boolean duplexPrinter;
+
+    public Printer(double tonerLevel, boolean duplexPrinter){
+        setTonerLevel(tonerLevel);
+        this.duplexPrinter = duplexPrinter;
+    }
+//    SETTERS
+    public void setTonerLevel(double tonerLevel){
+        if(tonerLevel >= 0 && tonerLevel <=100) { // tonerLevel can't be over 100% and below 0%
+            this.tonerLevel = tonerLevel;
+        } else this.tonerLevel = -1; // this indicates that tonerLevel was wrong value, -1 is read as error
+    }
+    public void setNumberOfPagesPrinted(int numberOfPagesPrinted){
+        this.numberOfPagesPrinted = numberOfPagesPrinted;
+    }
+
+//    GETTERS
+    public int getNumberOfPagesPrinted(){
+        return this.numberOfPagesPrinted;
+    }
+    public double getTonerLevel(){
+        return this.tonerLevel;
+    }
+    public boolean getDuplexPrinter(){
+        return this.duplexPrinter;
+    }
+// CHALLENGE METHODS
+    public double fillUpToner(double tonerInk){
+        if(tonerInk > 0 && tonerInk <= 100){
+            if(this.tonerLevel + tonerInk > 100) return -1;
+            else {
+                this.tonerLevel +=tonerInk;
+                return this.tonerLevel;
+            }
+        } else return -1; // this indicates that tonerLevel was wrong value, -1 is read as error
+
+    }
+    public void printPages(int numberOfPages, boolean printDoubleMode){
+        if(this.tonerLevel <= 0) System.out.println("Add toner to print"); //check if ink is available
+
+        if(duplexPrinter && printDoubleMode){ //check if printer can go duplex and duplex is ON
+            this.numberOfPagesPrinted += (numberOfPages / 2) + (numberOfPages % 0);
+        } else if(!duplexPrinter && printDoubleMode) { // when duplex mode is ON but printer can't go duplex
+            System.out.println("Your printer can't print in duplex mode");
+            this.numberOfPagesPrinted += numberOfPages;
+        }
+        else this.numberOfPagesPrinted += numberOfPages;  //Don't have duplex mode and it's switch off
+
+
+    }
+
+}
