@@ -1,0 +1,127 @@
+public class BillsBurger {
+    public static void main(String[] args) {
+        Hamburger hamburger = new Hamburger("Basic", "Sausage", 3.56, "White");
+        hamburger.addHamburgerAddition1("Tomato", 0.27);
+        hamburger.addHamburgerAddition2("Lettuce", 0.75);
+        hamburger.addHamburgerAddition3("Cheese", 1.13);
+        System.out.println("Total Burger price is " + hamburger.itemizeHamburger());
+
+        HealthyBurger healthyBurger = new HealthyBurger("Bacon", 5.67);
+        healthyBurger.addHamburgerAddition1("Egg", 5.43);
+        healthyBurger.addHealthyAddition1("Lentils", 3.41);
+        System.out.println("Total Healthy Burger price is  " + healthyBurger.itemizeHamburger());
+
+        DeluxeBurger db = new DeluxeBurger();
+        db.addHamburgerAddition3("Should not do this", 50.53);
+        System.out.println("Total Deluxe Burger price is " + db.itemizeHamburger());
+    }
+}
+class Hamburger{
+    private String name;
+    private double price;
+    private String breadRollType;
+    private String meat;
+
+    public Hamburger(String name, String meat, double price, String breadRollType) {
+        this.name = name;
+        this.price = price;
+        this.breadRollType = breadRollType;
+        this.meat = meat;
+    }
+
+    private String addition1Name;
+    private double addition1Price;
+    public void addHamburgerAddition1(String addition1Name, double addition1Price){
+        this.addition1Name = addition1Name;
+        this.addition1Price = addition1Price;
+    }
+
+    private String addition2Name;
+    private double addition2Price;
+    public void addHamburgerAddition2(String addition2Name, double addition2Price){
+        this.addition2Name = addition2Name;
+        this.addition2Price = addition2Price;
+    }
+
+    private String addition3Name;
+    private double addition3Price;
+    public void addHamburgerAddition3(String addition3Name, double addition3Price){
+        this.addition3Name = addition3Name;
+        this.addition3Price = addition3Price;
+    }
+
+    private String addition4Name;
+    private double addition4Price;
+    public void addHamburgerAddition4(String addition4Name, double addition4Price){
+        this.addition4Name = addition4Name;
+        this.addition4Price = addition4Price;
+    }
+
+    public double itemizeHamburger(){
+        return this.price +
+                this.addition1Price +
+                this.addition2Price +
+                this.addition3Price +
+                this.addition4Price;
+    }
+    
+
+
+}
+class DeluxeBurger extends Hamburger {
+    public DeluxeBurger() {
+        super("Deluxe burger", "beef",14 , "pun roll");
+        super.addHamburgerAddition1("Chips", 3.10);
+        super.addHamburgerAddition2("Drink",2 );
+    }
+
+    @Override
+    public void addHamburgerAddition1(String addition1Name, double addition1Price) {
+        System.out.println("Cannot not add additional items to deluxe burger");
+    }
+
+    @Override
+    public void addHamburgerAddition2(String addition2Name, double addition2Price) {
+        System.out.println("Cannot not add additional items to deluxe burger");
+    }
+
+    @Override
+    public void addHamburgerAddition3(String addition3Name, double addition3Price) {
+        System.out.println("Cannot not add additional items to deluxe burger");
+    }
+
+    @Override
+    public void addHamburgerAddition4(String addition4Name, double addition4Price) {
+        System.out.println("Cannot not add additional items to deluxe burger");
+    }
+}
+
+class HealthyBurger extends Hamburger{
+    public HealthyBurger(String meat, double price) {
+        super("healthy burger","brown rye bread roll", price, meat);
+    }
+
+    private String healthyExtra1Name;
+    private double healthyExtra1Price;
+    public void addHealthyAddition1(String healthyExtra1Name,double healthyExtra1Price){
+        this.healthyExtra1Name = healthyExtra1Name;
+        this.healthyExtra1Price = healthyExtra1Price;
+    }
+
+    private String healthyExtra2Name;
+    private double healthyExtra2Price;
+    public void addHealthyAddition2(String healthyExtra2Name,double healthyExtra2Price){
+        this.healthyExtra2Name = healthyExtra2Name;
+        this.healthyExtra2Price = healthyExtra2Price;
+    }
+    @Override
+    public double itemizeHamburger(){
+        System.out.println();
+        return super.itemizeHamburger() +
+                this.healthyExtra1Price +
+                this.healthyExtra2Price;
+    }
+    
+}
+
+
