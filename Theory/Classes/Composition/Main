@@ -1,0 +1,144 @@
+public class Main {
+    //using extends keyword clss can inheritance only by one class
+    //using composition class can use more than one subclass
+    public static void main(String[] args) {
+            Engine Alt2_0 = new Engine(2009, 4, "oil");
+            Tires tires = new Tires("Winter type", "3mm");
+            Wheels wheels = new Wheels(4, 20, "Chronic", tires );
+            Body redSedan = new Body("Sedan", "Red");
+
+            Car randomCar = new Car("Ford", Alt2_0, redSedan, wheels); // now randomClass instance of Car class, have nested classes
+                // those classes were already initialized
+                // we can access to those classes fields and methods
+
+            randomCar.getEngine().soundOfEngine(); //Wroom
+            //system read it as: randomCar object called getEngine, which called Alt2_0, which called Alt2_0.soundOfEngine() that ended printing "Wroom Wroom"
+            randomCar.getWheels().getTires().changeTires(); //Change tires on summer
+            // random car called getWheels(), which returned instance wheels of class Wheels
+                //than wheels called getTires(), which returned instance tires of class Tires
+                    //than tires called state changeTires() which returned "Change tires on summer"
+
+//            randomCar.getWheels().getTires().producerOfTires() //error
+        //state producerOfTires() is private, we can't access them by calling chain of classes
+        // we can access private states only localy, however we can call them by method which state is public
+        randomCar.getWheels().getTires().areTiresOriginal(); //yes
+        //Producer of tires is continental
+
+        System.out.println(randomCar.getBody()); //Body@2133c8f8
+        //this is a hashcode of object, sth like a adress in memory
+        //it can be checked by XXX.hashCode()
+
+    }
+
+}
+class Car {
+    private String model;
+    private Engine engine;
+    private Body body;
+    private Wheels wheels;
+    public Car(String model, Engine engine, Body body, Wheels wheels) {
+        this.model = model;
+        this.engine = engine;
+        this.body = body;
+        this.wheels = wheels;
+    }
+    public String getModel() {
+        return model;
+    }
+    public Engine getEngine() {
+        return engine;
+    }
+    public Body getBody() {
+        return body;
+    }
+    public Wheels getWheels() {
+        return wheels;
+    }
+}
+
+class Body {
+    private String type;
+    private String colour;
+    public Body(String type, String colour) {
+        this.type = type;
+        this.colour = colour;
+    }
+    public String getType() {
+        return type;
+    }
+    public String getColour() {
+        return colour;
+    }
+
+}
+class Engine {
+    private int yearOfProduction;
+    private int cylinders;
+    private String fuel;
+    public Engine(int yearOfProduction, int cylinders, String fuel){
+        this.yearOfProduction = yearOfProduction;
+        this.cylinders = cylinders;
+        this.fuel = fuel;
+    }
+    public int getYearOfProduction() {
+        return yearOfProduction;
+    }
+    public int getCylinders() {
+        return cylinders;
+    }
+    public String getFuel() {
+        return fuel;
+    }
+    public void soundOfEngine(){
+        System.out.println("Wroom Wroom");
+    }
+}
+class Tires {
+    private String type;
+    private String tread;
+    private Wheels wheels;
+    public Tires(String type, String tread){
+        this.type = type;
+        this.tread =  tread;
+
+    }
+
+    public void changeTires(){
+        System.out.println("Change tires on summer");
+    }
+    private void producerOfTires(){
+        System.out.println("Producer of tires is continental");
+    }
+    public void areTiresOriginal(){
+        System.out.println("yes");
+        producerOfTires();
+    }
+}
+ class Wheels {
+    private int numbers;
+    private int diameter;
+    private String rims;
+    private Tires tires;
+    public Wheels(int numbers, int diameter, String rims, Tires tires) {
+        this.numbers = numbers;
+        this.diameter = diameter;
+        this.rims = rims;
+        this.tires = tires;
+    }
+    public int getNumbers() {
+        return numbers;
+    }
+    public int getDiameter() {
+        return diameter;
+    }
+    public String getRims() {
+        return rims;
+    }
+    public Tires getTires(){
+        return tires;
+    }
+}
+
+
+
+
