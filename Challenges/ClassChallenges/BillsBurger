@@ -69,6 +69,8 @@ class Hamburger{
 
 }
 class DeluxeBurger extends Hamburger {
+//    private final String noAdditionalItemsMessage = "Cannot not add additional items to deluxe burger";
+//    this can be displayed instead of writing four times same message
     public DeluxeBurger() {
         super("Deluxe burger", "beef",14 , "pun roll");
         super.addHamburgerAddition1("Chips", 3.10);
