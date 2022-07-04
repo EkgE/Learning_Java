@@ -1,0 +1,62 @@
+import java.util.Scanner;
+
+public class ReverseString {
+    public static void main(String[] args){
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter string to reverse: ");
+        String stringToReverse = scanner.next();
+        stringLoop(stringToReverse);
+//        charArrayStringMethod(stringToReverse);
+//        stringBuilder(stringToReverse);
+//        stringBuffer(stringToReverse);
+
+
+
+   }
+//    USING TO CHAR ARRAY STRING
+    public static void charArrayStringMethod(String InputString){
+        long start = System.nanoTime(); //TIME CHECKER
+                char ch[] = InputString.toCharArray(); //making array of characters from String
+                for(int i = ch.length - 1; i >= 0; i--){ //Looping through array startng from end
+                    System.out.print(ch[i]); // printing each character of array
+                }
+        System.out.println("\nTime: "+ (System.nanoTime() - start) + " by charArrayStringMethod");
+    }
+//  USING BUILD IN CLASS StringBuilder
+    public static void stringBuilder(String InputString){
+        long start = System.nanoTime(); //TIME CHECKER
+                StringBuilder stringBuilder = new StringBuilder (); //making instance of object StringBuilder
+                stringBuilder.append(InputString); // adding inputted string to  object instance
+                stringBuilder.reverse();    // reversing string
+                System.out.println(stringBuilder);
+        System.out.println("Time: "+ (System.nanoTime() - start) + " by stringBuilder");
+    }
+//  USING BUILD IN CLASS StringBuffer
+    public static void stringBuffer(String InputString){
+        long start = System.nanoTime(); //TIME CHECKER
+                StringBuffer stringBuffer = new StringBuffer (); //making instance of object StringBuilder
+                stringBuffer.append(InputString); // adding inputted string to  object instance
+                stringBuffer.reverse();    // reversing string
+                System.out.println(stringBuffer);
+        System.out.println("Time: "+ (System.nanoTime() - start) + " by stringBuffer");
+    }
+//     USING LOOP
+    public static void stringLoop(String InputString){
+        long start = System.nanoTime(); //TIME CHECKER
+                for(int i = InputString.length() - 1; i >= 0; i-- ){ // InputString.length() allows us to specify length of String
+                    System.out.print(InputString.charAt(i)); //charAt allows us to print every char starting from the end
+                }
+                // same can be done as while
+        System.out.println("\nTime: "+ (System.nanoTime() - start) + " by stringLoop");
+    }
+
+////    USING GetBytes
+//    public static void stringGetBytes(String InputString){
+//        byte stringByteArray[] = InputString.getBytes(StandardCharsets.UTF_8);
+//        String
+//        for(int i = stringByteArray.length - 1; i >= 0; i--){
+//            System.out.print();
+//        }
+//    }
+
+}
