@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class DisplayN_NN_NNN {
+    public static void main(String[] args){
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter yoru value : ");
+        int inputInt = scanner.nextInt();
+
+        System.out.printf("%d + %d%d + %d%d%d",inputInt, inputInt, inputInt, inputInt, inputInt, inputInt);
+        //System.out.printf allows to write output with format and arguments
+        //  first value is String format with %d as placeholders
+        // rest, after first coma, are arguments that are inputted into String format
+        // each argument suits each %d in order
+        // %d matches integers while %s matches Strings 
+    }
+}
