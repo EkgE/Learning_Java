@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class CharToASCII {
+    public static void main(String[] args){
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter your character: ");
+        char character = scanner.next().charAt(0);
+        //next()function returns the next token/word in the input as a string
+        //charAt(0) function returns the first character in that string.
+        System.out.println("ASCII code for " + character + " = " + (int) character);
+        // character casted to int gives ASCII
+
+        
+
+    }
+}
