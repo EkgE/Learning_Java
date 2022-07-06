@@ -1,0 +1,34 @@
+import java.util.Scanner;
+public class SortedArray {
+
+  public static int [] getIntegers(int size){
+        Scanner scanner = new Scanner(System.in);
+        int array[] = new int[size];
+        for(int i = 0; i < size; i++){
+            array[i] = scanner.nextInt();
+        }
+        return array;
+    }
+    public static void printArray(int array[]){
+        for(int i = 0; i < array.length; i++){
+            System.out.printf("\nElement %d contents %d", i, array[i]);
+        }
+    }
+    public static int[] sortIntegers(int array[]){
+        int arrayCopy[] = array.clone();
+        int temp;
+        for (int i = 0; i < arrayCopy.length; i++)
+        {
+            for (int j = i + 1; j < arrayCopy.length; j++)
+            {
+                if (arrayCopy[i] < arrayCopy[j])
+                {
+                    temp = arrayCopy[i];
+                    arrayCopy[i] = arrayCopy[j];
+                    arrayCopy[j] = temp;
+                }
+            }
+        }
+        return arrayCopy;
+    }
+}
