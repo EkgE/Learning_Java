@@ -50,6 +50,10 @@ public class UserInput {
         //using this syntax we can avoid error
         //if testedInt wasn't in if the wrong input would give error
         //meanwhile it returns if codeblocks, so we can write code that still be executed even if error appear somewhere
+        
+                //next() reads only one word
+            //next() skip whitespace, it reads only token
+        //nextLine() read whole line of input
 
     }
 }
