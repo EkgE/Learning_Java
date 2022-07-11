@@ -1,0 +1,35 @@
+class ReferenceVSData {
+    public static void main(String[] args){
+        int intExample = 10; //System.out.println(intExample) //10
+        int intSecondExample = intExample; //System.out.println(IntSecondExample) //10
+        intSecondExample++;
+        //System.out.println(intExample) //10
+        //System.out.println(IntSecondExample) //11
+                //those are data values
+                // they are stored in memory to allocate data
+                // while referencing into intExample by intSecondExample, data is copied
+                // so when we use intSecondExample it works independently of intExample
+
+        int[] arrayIntExample = new int[5];// array is a reference type
+        int[] arrayIntSecondExample = arrayIntExample;
+//        System.out.println(Arrays.toString(arrayIntExample)); //[0, 0, 0, 0, 0]
+//        System.out.println(Arrays.toString(arrayIntSecondExample)); //[0, 0, 0, 0, 0]
+        arrayIntSecondExample[1] = 2;
+//        System.out.println(Arrays.toString(arrayIntExample)); //[0, 2, 0, 0, 0]
+//        System.out.println(Arrays.toString(arrayIntSecondExample)); //[0, 2, 0, 0, 0]
+                // reference means, that it's bounded to adres of object, but not data itself
+                // arrayIntExample used keyword new to make new instance of array object
+                // arrayIntSecondExample refers to that instance by calling arrayIntExample
+                // every change made from arrayIntExample or arrayIntSecondExample level affect that instance of array object
+                // so every reference would get the same results
+
+        int[] arrayIntThirdExample = new int [5];
+        arrayIntSecondExample = arrayIntThirdExample;
+        arrayIntThirdExample[0] = 3;
+//        System.out.println(Arrays.toString(arrayIntExample)); //[0, 2, 0, 0, 0]
+//        System.out.println(Arrays.toString(arrayIntSecondExample)); //[3, 0, 0, 0, 0]
+//        System.out.println(Arrays.toString(arrayIntThirdExample)); //[3, 0, 0, 0, 0]
+            // arrayIntSecondExample was dereferenced, which means that this variable lost connect to  before initialized array
+            // and now it's refer to same array as arrayIntThirdExample
+    }
+}
