@@ -66,10 +66,13 @@ public class Operators {
         if((testVar > 40) && (testVar < 60)){
             System.out.println("both true");
         } //&&(AND) checks both test, if both of them are true, return true
+        //false && ... gives always false, java don't even check another arguments
 
         if((testVar > 40) || (testVar < 45)){
             System.out.println("at least one true");
         } // ||(OR) checks both tests, if at least one of them is true, return true
+        //true || ... gives always true, java don't even check another arguments
+
 
         // it's good practice to add second parenthesis using OR or AND operators
         //doesn't change in meaning, but it's easier to read
@@ -78,6 +81,11 @@ public class Operators {
         String ternaryOperator = testVarOne > 50 ? "Bigger than 50" : "Lower than 50";
         // ternary operator if the value before ? is true, return first value
         System.out.println(ternaryOperator);
+        
+        if((testVar > 40) ^ (testVar < 60)){
+            System.out.println("One false one true");
+        } //^(XOR) checks both test, if tey have different values, it gives true
+
 
 
     }
