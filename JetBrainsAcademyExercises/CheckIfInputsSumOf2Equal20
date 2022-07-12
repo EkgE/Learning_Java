@@ -1,0 +1,28 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        ArrayList<Integer> inputArray = new ArrayList<>();
+        while (scanner.hasNextInt()) {
+            int input = scanner.nextInt();
+            inputArray.add(input);
+        }       
+        inner: while (true) {
+            for (int i = 0; i < inputArray.size(); i++) {
+                for (int j = i + 1; j < inputArray.size(); j++) {
+                    if (inputArray.get(i) + inputArray.get(j) == 20) {
+                        System.out.println(true);
+                        break inner;
+                    }
+                }
+            }
+            System.out.println(false);
+            break;
+        }
+    }
+}
+/* Write a program that reads the numbers a, b, c and checks if there's a pair of them that adds up to exactly 20.
+The program must output true or false.
+I wanted to check any number of inputs */
