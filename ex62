@@ -1,0 +1,32 @@
+using System;
+using System.Linq;
+using System.Collections;
+internal class Exercise
+{
+    /* Write a C# program to reverse the strings contained in each pair of matching parentheses in a given string and also remove the parentheses within the given string.
+     */
+
+    static void Main(string[] args)
+    {
+        string x = "ab(cd(ef)gh)ij";
+        Console.Write(ex62(x));
+        Console.ReadKey();
+    }
+    public static string ex62(string input)
+    {
+         if(input.LastIndexOf('(') == -1)
+            {
+                return input;
+            }
+         int indexBrStart = input.LastIndexOf('(');
+         int indexBrEnd = input.IndexOf(')', indexBrStart);
+        string y = input.Substring(0, indexBrStart) + new string(input.Substring(indexBrStart + 1, input.IndexOf(')') - indexBrStart  -  1).Reverse().ToArray()) + input.Substring(indexBrEnd + 1);
+        return ex62(y);
+             
+
+
+
+
+
+    }
+}
